@@ -36,7 +36,7 @@ class Home extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(left: 17),
+                    padding: const EdgeInsets.only(left: 17),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -90,20 +90,14 @@ class MyClip extends CustomClipper<Path>{
     path.lineTo(w*0.49, h*0.25);
     path.quadraticBezierTo(w*0.5,0,w*0.35, 0);
 
-    //path.quadraticBezierTo(w*0.5,0 );
-
-
-/*    path.lineTo(0, h);
-    path.lineTo(w, h);
-    path.lineTo(w, 0);
-    path.close();*/
+    path.close();
     return path;
   }
 
   @override
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
     // TODO: implement shouldReclip
-   return true;
+   return false;
   }
 
 }
